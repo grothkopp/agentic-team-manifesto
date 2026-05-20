@@ -3,18 +3,23 @@
 We are discovering better ways of building software by combining human judgment with AI agents. Through this work we have come to value:
 
 **Outcomes** over output
+
 More code is not more value. We measure what ships to users, not what ships to the merge queue.
 
 **Context** over tooling
+
 The best AI tools fail without accessible knowledge. We invest in making our organization's context machine-readable.
 
 **Orchestration** over execution
+
 Our job is to direct, review, and decide. We delegate production to agents and focus human energy where judgment matters.
 
 **Continuous flow** over fixed ceremonies
+
 We ship when ready, not when the sprint ends. We plan around review capacity, not production capacity.
 
 **Governance as speed** over governance as control
+
 Clear rules and automated guardrails let agents move fast. We build trust through transparency, not through committees.
 
 That is, while there is value in the items on the right, we value the items on the left more.
