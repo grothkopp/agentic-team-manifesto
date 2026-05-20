@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Manifesto for Agentic Teams</title>
+<meta name="description" content="We are discovering better ways of building software by combining human judgment with AI agents." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #FAFAFA;
+    --surface: #FFFFFF;
+    --ink: #1A2B3C;
+    --ink-2: #243749;
+    --muted: #5A6B7C;
+    --muted-2: #8090A0;
+    --border: #E5E7EB;
+    --accent: #E8723A;
+    --accent-ink: #B85820;
+    --col: 720px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--ink); color: #fff; }
+
+  .mono {
+    font-family: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  }
+
+  /* ── Layout ── */
+  .col {
+    max-width: var(--col);
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 120px 0 80px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--ink);
+  }
+
+  .hero .preamble {
+    margin-top: 32px;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ── Values ── */
+  .values {
+    padding: 64px 0 80px;
+  }
+
+  .value {
+    padding: 40px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .value:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .value .pair {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+
+  .value .pair .left {
+    color: var(--ink);
+  }
+
+  .value .pair .over {
+    color: var(--muted-2);
+    font-weight: 400;
+    font-size: 22px;
+  }
+
+  .value .pair .right {
+    color: var(--muted-2);
+    font-weight: 400;
+  }
+
+  .value .explain {
+    margin-top: 12px;
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 600px;
+  }
+
+  .coda {
+    padding: 40px 0 0;
+    font-size: 17px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  /* ── Principles ── */
+  .principles-section {
+    padding: 80px 0 40px;
+  }
+
+  .principles-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .principle {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 16px;
+    padding: 24px 0;
+    border-top: 1px solid var(--border);
+    align-items: baseline;
+  }
+
+  .principle:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .principle .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--muted-2);
+    letter-spacing: 0.04em;
+    padding-top: 2px;
+  }
+
+  .principle .text {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink-2);
+  }
+
+  /* ── Footer ── */
+  .site-footer {
+    padding: 64px 0 80px;
+    text-align: center;
+  }
+
+  .site-footer .author {
+    font-size: 15px;
+    color: var(--muted);
+  }
+
+  .site-footer .author a {
+    color: var(--accent-ink);
+    text-decoration: none;
+  }
+
+  .site-footer .author a:hover {
+    text-decoration: underline;
+  }
+
+  .site-footer .year {
+    margin-top: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--muted-2);
+  }
+
+  .site-footer .license {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--muted-2);
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 640px) {
+    .hero { padding: 80px 0 56px; }
+    .hero h1 { font-size: 32px; }
+    .hero .preamble { font-size: 18px; }
+    .value .pair { font-size: 22px; }
+    .value .pair .over { font-size: 18px; }
+    .principles-section h2 { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="col">
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Manifesto for<br>Agentic Teams</h1>
+    <p class="preamble">
+      We are discovering better ways of building software by combining human judgment with AI agents.
+    </p>
+  </div>
+
+  <!-- Values -->
+  <div class="values">
+
+    <div class="value">
+      <div class="pair">
+        <span class="left">Outcomes</span>
+        <span class="over"> over </span>
+        <span class="right">output</span>
+      </div>
+      <p class="explain">More code is not more value. We measure what ships to users, not what ships to the merge queue.</p>
+    </div>
+
+    <div class="value">
+      <div class="pair">
+        <span class="left">Context</span>
+        <span class="over"> over </span>
+        <span class="right">tooling</span>
+      </div>
+      <p class="explain">The best AI tools fail without accessible knowledge. We invest in making our organization's context machine-readable.</p>
+    </div>
+
+    <div class="value">
+      <div class="pair">
+        <span class="left">Orchestration</span>
+        <span class="over"> over </span>
+        <span class="right">execution</span>
+      </div>
+      <p class="explain">Our job is to direct, review, and decide. We delegate production to agents and focus human energy where judgment matters.</p>
+    </div>
+
+    <div class="value">
+      <div class="pair">
+        <span class="left">Continuous flow</span>
+        <span class="over"> over </span>
+        <span class="right">fixed ceremonies</span>
+      </div>
+      <p class="explain">We ship when ready, not when the sprint ends. We plan around review capacity, not production capacity.</p>
+    </div>
+
+    <div class="value">
+      <div class="pair">
+        <span class="left">Governance as speed</span>
+        <span class="over"> over </span>
+        <span class="right">governance as control</span>
+      </div>
+      <p class="explain">Clear rules and automated guardrails let agents move fast. We build trust through transparency, not through committees.</p>
+    </div>
+
+    <p class="coda">That is, while there is value in the items on the right, we value the items on the left more.</p>
+  </div>
+
+  <!-- Principles -->
+  <div class="principles-section">
+    <h2>Principles</h2>
+
+    <div class="principle">
+      <div class="num">01</div>
+      <div class="text">Our highest priority is to deliver value to users. Agents that produce output nobody uses are waste, not progress.</div>
+    </div>
+
+    <div class="principle">
+      <div class="num">02</div>
+      <div class="text">AI is an amplifier, not a miracle. It accelerates what's already there. If the foundation is weak, AI makes it worse faster. We invest in the foundation first.</div>
+    </div>
+
+    <div class="principle">
+      <div class="num">03</div>
+      <div class="text">We treat Context Debt like Technical Debt. Undocumented decisions, tribal knowledge, and stale documentation are liabilities. We pay them down systematically because our agents depend on it.</div>
+    </div>
+
+    <div class="principle">
+      <div class="num">04</div>
+      <div class="text">We measure outcomes, not velocity. Features shipped, problems solved, users served. Not PRs merged, lines generated, or story points completed.</div>
+    </div>
+
+    <div class="principle">
+      <div class="num">05</div>
+      <div class="text">The bottleneck has shifted. Code is cheap, judgment is scarce. We organize our team around review, verification, and decision-making, not around production.</div>
+    </div>
+
+    <div class="principle">
+      <div class="num">06</div>
+      <div class="text">Every agent has an identity, an owner, and a decision log. We don't deploy autonomous systems without accountability. Governance is infrastructure, not bureaucracy.</div>
+    </div>
+
+    <div class="principle">
+      <div class="num">07</div>
+      <div class="text">We delegate deliberately. The team has shared criteria for what gets delegated to agents, what stays human, and what's a collaboration. This is a team discipline, not an individual preference.</div>
+    </div>
+
+    <div class="principle">
+      <div class="num">08</div>
+      <div class="text">We recognize and reduce AI Waste. Overproduction, review bottlenecks, governance theater, context loss, over-prompting, wrong granularity, unused output, and manual work that should be automated. We audit regularly and fix relentlessly.</div>
+    </div>
+
+    <div class="principle">
+      <div class="num">09</div>
+      <div class="text">Small batches, continuous deployment, automated quality gates. Agent output follows the same engineering standards as human code. No exceptions, no shortcuts.</div>
+    </div>
+
+    <div class="principle">
+      <div class="num">10</div>
+      <div class="text">We build shared knowledge, not individual expertise. Prompt patterns, agent configurations, and delegation criteria belong to the team. When someone leaves, the knowledge stays.</div>
+    </div>
+
+    <div class="principle">
+      <div class="num">11</div>
+      <div class="text">We talk openly about how AI changes roles and identities. Senior engineers design systems instead of writing code. Juniors learn by reviewing agent output and understanding why. We create new narratives, not new anxieties.</div>
+    </div>
+
+    <div class="principle">
+      <div class="num">12</div>
+      <div class="text">We plan in short cycles with honest assessments, measurable goals, and named owners. Review, learn, adjust, repeat. Long-term roadmaps are speculation. Disciplined execution in tight loops is where value lives.</div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="site-footer">
+    <p class="author">
+      <a href="https://grothkopp.com">Stefan Grothkopp</a>
+    </p>
+    <p class="year">2026</p>
+    <p class="license">
+      This declaration may be freely copied in any form,
+      but only in its entirety through this notice.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
